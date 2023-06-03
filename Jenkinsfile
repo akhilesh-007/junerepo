@@ -5,7 +5,8 @@ pipeline {
     Docker_Tag='v3'
     }
     stages {
-        parallel
+        stage('pre-check'){
+            parallel {
         stage('git') {
             steps { 
             sh 'git --version'
@@ -13,9 +14,9 @@ pipeline {
         }
         stage('docker') {
             steps {
-                retry (3) {
                 sh 'docker --version'
-                }
+            }
+        }
             }
         }
  stage('docker-build'){
