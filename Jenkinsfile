@@ -7,6 +7,7 @@ pipeline {
     options { 
         timestamps() 
         buildDiscarder(logRotator(numToKeepStr: '3'))
+        disableConcurrentBuilds()
     }
     stages {
         stage('pre-check'){
@@ -19,6 +20,7 @@ pipeline {
         stage('docker') {
             steps {
                 sh 'docker --version'
+                sh 'sleep 30'
             }
         }
             }
