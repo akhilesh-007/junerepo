@@ -1,2 +1,2 @@
 From httpd
-Label name="Autopilot"
+Label name="Auto"
