@@ -12,7 +12,9 @@ pipeline {
         }
         stage('docker') {
             steps {
-                sh 'docker --version'
+                retry (3) {
+                sh 'doker --version'
+                }
             }
         }
  stage('docker-build'){
