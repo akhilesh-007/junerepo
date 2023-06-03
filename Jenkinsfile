@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
     Docker_Image_Name='myimage'
-    Docker_Tag='v2'
+    Docker_Tag='v3'
     }
     stages {
         stage('git') {
