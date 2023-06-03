@@ -4,6 +4,8 @@ pipeline {
     Docker_Image_Name='myimage'
     Docker_Tag='v3'
     }
+    
+    options { timestamps() }
     stages {
         stage('pre-check'){
             parallel {
