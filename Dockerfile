@@ -1,2 +1,2 @@
 From httpd
-LABEL devops
+Label devops
